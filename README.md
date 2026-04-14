@@ -1,77 +1,24 @@
 # crypto-dashboard
 
-A modern crypto dashboard built with React, TanStack Query, Recharts, and Tailwind. It fetches live prices from the CoinGecko API and displays them as cards and charts.
+Un dashboard crypto moderne construit avec React, TypeScript et Vite. Il récupère les prix en temps réel depuis l'API CoinGecko et les affiche sous forme de cartes et de graphiques.
 
-# React + TypeScript + Vite
+## Stack technique
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- **Vite** `^8.0.4` — [vitejs.dev](https://vitejs.dev)
+- **React** `^19.2.4` — [react.dev](https://react.dev)
+- **TypeScript** `~6.0.2` — [typescriptlang.org](https://www.typescriptlang.org)
+- **TanStack Query** `^5.99.0` — [tanstack.com/query/v5](https://tanstack.com/query/v5)
+- **Recharts** `^3.8.1` — [recharts.org](https://recharts.org)
+- **Tailwind CSS** `^4.2.2` — [tailwindcss.com](https://tailwindcss.com)
 
-Currently, two official plugins are available:
+## Fonctionnalités
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Les différentes fonctionnalités de ce mini site sont :
 
-## React Compiler
+- l'affichage des prix de crypto en temps réel (rafraîchissement toutes les minutes) ;
+- cartes de résumé par actif ;
+- graphique d'évolution des prix sur 24 heures ;
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Aperçu
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
-
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+![vue du site](public/image.png)
