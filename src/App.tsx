@@ -7,7 +7,9 @@ import {
   Tooltip,
   ResponsiveContainer,
   CartesianGrid,
+  Treemap,
 } from "recharts";
+import { RechartsDevtools } from "@recharts/devtools";
 import CoinCard from "./components/CoinCard";
 
 const COINS = "bitcoin,ethereum,solana,cardano,dogecoin";
@@ -42,6 +44,11 @@ export default function App() {
     variation: parseFloat(coin.price_change_percentage_24h.toFixed(2)),
   }));
 
+  const treemapData = data.map((coin: any) => ({
+    name: coin.symbol.toUpperCase(),
+    size: coin.market_cap,
+  }));
+
   return (
     <div className="min-h-screen bg-gray-100 p-8">
       <h1 className="text-3xl font-bold text-gray-800 mb-8">
@@ -54,7 +61,7 @@ export default function App() {
         ))}
       </div>
 
-      <div className="bg-white rounded-2xl p-6 shadow">
+      <div className="bg-white rounded-2xl p-6 shadow mb-8">
         <h2 className="text-xl font-bold text-gray-700 mb-4">
           Variation 24h (%)
         </h2>
@@ -72,6 +79,29 @@ export default function App() {
               dot={{ r: 5 }}
             />
           </LineChart>
+        </ResponsiveContainer>
+      </div>
+
+      <div className="bg-white rounded-2xl p-6 shadow">
+        <h2 className="text-xl font-bold text-gray-700 mb-4">
+          Test de treemap
+        </h2>
+        <ResponsiveContainer width="100%" height={300}>
+          <Treemap
+            style={{
+              width: "100%",
+              maxWidth: "500px",
+              maxHeight: "80vh",
+              aspectRatio: 4 / 3,
+            }}
+            data={treemapData}
+            dataKey="size"
+            aspectRatio={4 / 3}
+            stroke="#fff"
+            fill="#8884d8"
+          >
+            <RechartsDevtools />
+          </Treemap>
         </ResponsiveContainer>
       </div>
     </div>
