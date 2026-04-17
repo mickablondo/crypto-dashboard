@@ -84,7 +84,7 @@ export default function App() {
 
       <div className="bg-white rounded-2xl p-6 shadow">
         <h2 className="text-xl font-bold text-gray-700 mb-4">
-          Test de treemap
+          Test de treemap - Market Cap
         </h2>
         <ResponsiveContainer width="100%" height={300}>
           <Treemap
