@@ -8,6 +8,7 @@ import {
   ResponsiveContainer,
   CartesianGrid,
   Treemap,
+  RadialBarChart,
 } from "recharts";
 import { RechartsDevtools } from "@recharts/devtools";
 import CoinCard from "./components/CoinCard";
@@ -103,6 +104,14 @@ export default function App() {
             <RechartsDevtools />
           </Treemap>
         </ResponsiveContainer>
+      </div>
+
+      {/* TODO : ajouter un SimpleRadiarBarChart pour afficher la répartition des cryptos en fonction de leur market cap (ex : bitcoin 40%, ethereum 20%, etc) */}
+      <div className="bg-white rounded-2xl p-6 shadow mt-8">
+        <h2 className="text-xl font-bold text-gray-700 mb-4">
+          Test de SimpleRadarBarChart - Market Cap
+        </h2>
+        <RadialBarChart></RadialBarChart>
       </div>
     </div>
   );
