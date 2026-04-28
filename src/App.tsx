@@ -15,7 +15,7 @@ import {
 import { RechartsDevtools } from "@recharts/devtools";
 import CoinCard from "./components/CoinCard";
 
-const COINS = "bitcoin,ethereum,solana,cardano,dogecoin";
+const COINS = "bitcoin,ethereum,solana,cardano,dogecoin,tron,tether";
 const API_URL = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${COINS}&order=market_cap_desc`;
 const style = {
   top: "50%",
