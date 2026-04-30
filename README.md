@@ -19,6 +19,8 @@ Les différentes fonctionnalités de ce mini site sont :
 - cartes de résumé par actif ;
 - graphique d'évolution des prix sur 24 heures ;
 
+A noter : la liste des crypto est en dur dans App.tsx pour le moment.
+
 ## Aperçu
 
 ![vue du site](public/image.png)
